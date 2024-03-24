@@ -334,7 +334,6 @@ button {
 .big_zone_item h1 {
   width: 150px;
   align-self: flex-start;
-  /* font-size: 19px; */
 }
 
 .big_zone_item h5 {
@@ -380,9 +379,10 @@ button {
 }
 
 /* 
-* Leave & Family
+* -------------------
+*  Leave & Family
+* ------------------
 */
-
 .leave_family {
   display: flex;
   height: 80vh;
@@ -442,7 +442,9 @@ button {
 }
 
 /* 
-* CATEGORIES FOR MEN
+* -------------------
+*  CATEGORIES
+* ------------------
 */
 .categories_for_men {
   display: grid;
@@ -461,7 +463,6 @@ button {
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
-  /* box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); */
 }
 
 .category_for_men_content {
@@ -487,17 +488,165 @@ button {
   color: #7f7f7f;
 }
 
-/* TOP BRAND */
+/* 
+* -------------------
+*  TOP BRAND
+* ------------------
+*/
 .top_brand {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
-  background-color: #3c4242;
   border-radius: 20px;
   color: #ffff;
+  background-color: #3c4242;
+  padding: 30px;
+}
+
+.top_brand h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.top_brand p {
+  font-weight: 300;
+}
+
+.top_brand p span {
+  color: #ffc400;
 }
 
 .top_brand_images {
   display: flex;
+  gap: 1rem;
 }
+
+.top_brand_images div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.top_brand_images img {
+  width: 80px;
+}
+
+/* 
+* -------------------
+*  LIMELIGHT
+* ------------------
+*/
+
+/* 
+* -------------------
+*  FEEDBACK
+* ------------------
+*/
+
+/* 
+* -------------------
+*  FOOTER
+* ------------------
+*/
+footer {
+  background-color: #3c4242;
+
+  padding: 3rem 10rem;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+footer .footer_middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_icons {
+  display: flex;
+  gap: 10px;
+
+  align-self: flex-end;
+}
+
+.footer_icons .footer_icon {
+  border-radius: 5px;
+  background-color: #ffff;
+
+  width: 40px;
+  height: 30px;
+
+  color: #3c4242;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_applications {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer_applications h1 {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.footer_applications > div {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_applications .app {
+  background-color: #404040;
+  padding: 10px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  width: 180px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.footer_top {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.footer_applications .app span {
+  font-weight: 600;
+}
+
+.footer_lists_header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer_lists_header h1 {
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+footer .copyright {
+  text-align: center;
+}
+
+/* 
+* -------------------
+* MEDIA SCREEN 
+* ------------------
+*/
