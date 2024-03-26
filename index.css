@@ -12,7 +12,7 @@
 }
 
 :focus {
-  border: 2px solid blue;
+  border: 2px solid #5e5e5e;
 }
 
 body {
@@ -109,6 +109,10 @@ button {
 
 .navbar_icons button:hover {
   background-color: #d7d7d7;
+}
+
+.sidebar_btn {
+  display: none;
 }
 
 /* 
@@ -251,8 +255,8 @@ button {
 
 .arrivals {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .arrival img {
@@ -281,14 +285,14 @@ button {
 
 .big_zone_item_1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  column-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
 }
 
 .big_zone_item_2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  column-gap: 30px;
+  gap: 30px;
 }
 
 .big_zone_item {
@@ -390,7 +394,6 @@ button {
 
 .leave_family .leave {
   flex: 1;
-  background-color: orange;
 
   position: relative;
 }
@@ -431,8 +434,6 @@ button {
 
 .leave_family .family {
   flex: 1;
-
-  background-color: green;
 }
 
 .leave_family .family img {
@@ -519,7 +520,9 @@ button {
 }
 
 .top_brand_images {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 60%;
   gap: 1rem;
 }
 
@@ -541,6 +544,80 @@ button {
 *  LIMELIGHT
 * ------------------
 */
+
+.limelight_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 30px;
+}
+
+.limelight_item {
+  height: 500px;
+}
+
+.limelight_item_image {
+  position: relative;
+  height: 400px;
+}
+
+.limelight_item_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.limelight_item_image i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  /* width: 50px;
+  height: 50px; */
+
+  padding: 10px;
+  border-radius: 100%;
+  background: #ffff;
+  font-size: 19px;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+}
+
+.limelight_item_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+}
+
+.limelight_item_content h3 {
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #171616;
+  font-weight: 600;
+}
+
+.limelight_item_content p {
+  color: #515151;
+}
+
+.limelight_item_content button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  background: #f6f6f6;
+  transition: all 0.3s ease-in-out;
+}
+
+.limelight_item_content button:hover {
+  font-weight: 700;
+  background: #d5d5d5;
+}
 
 /* 
 * -------------------
@@ -565,8 +642,15 @@ footer {
 }
 
 footer .footer_middle {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+footer a {
+  color: #fff;
 }
 
 .footer_icons {
@@ -650,3 +734,98 @@ footer .copyright {
 * MEDIA SCREEN 
 * ------------------
 */
+
+@media screen and (max-width: 1120px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .big_zone_item_1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .big_zone_item_2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav_items,
+  .navbar_icons {
+    display: none;
+  }
+
+  .navbar_form {
+    width: 50%;
+  }
+
+  .sidebar_btn {
+    display: block;
+    font-size: 20px;
+    padding: 7px 20px;
+    border-radius: 6px;
+    background-color: #e4e4e4;
+  }
+
+  .slider {
+    padding: 4rem;
+  }
+
+  .slider h1 {
+    width: 400px;
+    font-size: 4rem;
+    line-height: 60px;
+  }
+
+  #wrapper {
+    padding: 2rem;
+  }
+
+  .box_container {
+    flex-direction: column;
+  }
+
+  .box_container .box {
+    width: 100%;
+  }
+
+  .box p {
+    font-size: 23px;
+  }
+
+  .upper {
+    text-transform: uppercase;
+  }
+
+  .box h1 {
+    font-size: 30px;
+  }
+
+  .big_zone_item_2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 30px;
+  }
+
+  .leave_family {
+    height: 50vh;
+  }
+
+  .leave_family .leave .leave_content {
+    top: 12%;
+    left: 30px;
+  }
+
+  .leave_family .family {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 490px) {
+  .navbar_form {
+    display: none;
+  }
+}
