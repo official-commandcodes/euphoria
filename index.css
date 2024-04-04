@@ -11,9 +11,9 @@
   outline: none;
 }
 
-:focus {
+/* :focus {
   border: 2px solid #5e5e5e;
-}
+} */
 
 body {
   font-family: "Poppins", sans-serif;
@@ -25,6 +25,21 @@ button {
   cursor: pointer;
 }
 
+.observerAnimation {
+  animation: observerAnimation 3s ease;
+}
+
+@keyframes observerAnimation {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #container {
   max-width: 100rem;
   width: 100%;
@@ -32,8 +47,13 @@ button {
 
 #wrapper {
   padding: 2rem 6rem;
+  transition: transform 2s ease;
 }
 
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
 /* 
 * -------------------
 *  navigation styling
@@ -124,13 +144,15 @@ button {
 }
 
 .slider_btn {
+  width: 60px;
+  height: 60px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   font-size: 30px;
-  color: #151515db;
-  border-radius: 100%;
   cursor: pointer;
   background: none;
+  border: 1px solid #f1f1f1db;
+  color: #f1f1f1db;
 }
 
 .slider_btn--right {
@@ -153,9 +175,10 @@ button {
   padding: 8rem;
   color: #ffff;
 
-  background-image: url(./images/shop_header.jpg);
   background-position: center;
   background-size: cover;
+
+  transition: transform 0.3s ease;
 }
 
 .slider h1 {
@@ -252,7 +275,7 @@ button {
 
 .arrivals {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
@@ -288,7 +311,7 @@ button {
 
 .big_zone_item_2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
@@ -446,7 +469,7 @@ button {
 */
 .categories_for_men {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.8rem;
 }
 
@@ -544,7 +567,7 @@ button {
 
 .limelight_items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 30px;
 }
 
@@ -569,17 +592,10 @@ button {
   top: 10px;
   right: 10px;
 
-  /* width: 50px;
-  height: 50px; */
-
   padding: 10px;
   border-radius: 100%;
   background: #ffff;
   font-size: 19px;
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   cursor: pointer;
 }
 
@@ -640,7 +656,7 @@ footer {
 
 footer .footer_middle {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 footer a {
@@ -827,7 +843,7 @@ footer .copyright {
 
   .big_zone_item_2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     column-gap: 30px;
   }
 
