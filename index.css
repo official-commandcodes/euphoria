@@ -25,21 +25,6 @@ button {
   cursor: pointer;
 }
 
-.observerAnimation {
-  animation: observerAnimation 3s ease;
-}
-
-@keyframes observerAnimation {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 #container {
   max-width: 100rem;
   width: 100%;
@@ -141,6 +126,8 @@ button {
   position: relative;
   height: 700px;
   width: 100%;
+  background-color: orange;
+  overflow-x: hidden;
 }
 
 .slider_btn {
